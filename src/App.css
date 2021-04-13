@@ -1,38 +1,269 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  height: 100%;
+}
+html{
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBox {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  z-index: 2;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navLogo {
+  display: flex;
+  position: absolute;
+  left: 5%;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 35vw;
+  left: 60%;
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+}
+
+.mainContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+
+
+}
+
+.mainDiv {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #fc0093; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23ef2d9e' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23e359aa' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23dc80b6' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23daa2c3' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23dcc0d0' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23e3d9df' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+
+
+
+}
+
+.girlImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 4%;
+
+}
+
+.girlImg > img{
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  position: absolute;
+
+}
+
+.mainCta{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.mainCta > h2 {
+  position: absolute;
+  width: 60%;
+  line-height: 1.3;
+  letter-spacing: 2;
+  left: 20%;
+  top: 20%;
+  font-size: 4.5em;
+  font-family: 'Nunito', sans-serif;
+}
+
+.mainCta > button {
+  width: 25%;
+  position: relative;
+  height: 10%;
+  max-height: 100px;
+  top: 75%;
+  left: 35%;
+  font-size: 2em;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  border: none;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.sideBar {
   display: flex;
   flex-direction: column;
+  width: 10vw;
+  height: 100%;
+  background-color: #fff;
+
+}
+
+.sideBarRight{
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.bottomNav{
+  display: flex;
+  margin-top: 5%;
+  height: 20%;
+  width: 100%;
+  flex-direction: row;
+  background-color: blue;
+
+}
+
+.bottomNavContent{
+  display: flex;
+  width: 100%;
+}
+
+/* grid */
+
+.exploreGrid{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 100%; */
+  background-color: #fff;
+  position: relative;
+}
+
+.gridMain{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5%;
+  border-radius: 50px;
+  justify-content: flex-start;
   align-items: center;
+  position: relative;
+  background: rgb(199,180,255);
+  background: linear-gradient(180deg, rgba(199,180,255,1) 0%, rgba(152,221,202,1) 95%, rgba(152,221,202,1) 100%);}
+
+#explore {
+  font-size: 3em;
+  font-family: 'Nunito', sans-serif;
+  z-index: 2;
+  padding: 2.5% 0;
+  }
+
+.imageGrid{
+  display: grid;
+  position: relative;
+  height: 100%;
+  /* background-color: pink; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 25vw);
+  gap: 20px;
+}
+.gridImages{
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+  /* transform-style: preserve-3d;
+  transition: all .7s linear; */
+}
+
+.backSideGridImage{
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  justify-self: center;
+  opacity: 0.6;
+  position: relative;
+  display: flex;
+}
+
+.imageBio{
+  display: flex;
+  position: absolute;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 75%;
+  bottom: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.imageSocials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imageContainer{
+  position: relative;
+  z-index: 1;
+  perspective: 1000px;
+}
+
+/* .imageContainer:hover .gridImages  {
+  transform: rotateY(180deg);
+} */
+
+
+.imageContainer > h3 {
+  position: absolute;
+  top: 10%;
+  z-index: 2;
+}
+
+.cardSide {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+.card{
+  width: 100px;
+  height: 200px;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
