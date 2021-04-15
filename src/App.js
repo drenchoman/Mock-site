@@ -3,7 +3,6 @@ import NavBar from './Components/Navbar'
 import Main from './Components/Main'
 import BottomNav from './Components/BottomNav'
 import Grid from './Components/Grid'
-import Card from './Components/Card'
 
 import './App.css'
 
@@ -13,8 +12,6 @@ function App() {
           <NavBar />
 
           <Main />
-
-          <Card />
 
           <Grid />
 

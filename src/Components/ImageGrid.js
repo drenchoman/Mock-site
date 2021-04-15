@@ -16,6 +16,9 @@ import n from '../images/n.webp'
 import v from '../images/v.webp'
 import x from '../images/x.webp'
 import z from '../images/z.webp'
+import insta from '../images/insta.svg'
+import facebook from '../images/facebook.svg'
+import globe from '../images/globe.svg'
 
 function ImageGrid(props) {
 
@@ -33,42 +36,42 @@ const images = [{
   src: img1,
   alt: "Girl in blue shirt and white ripped jeans",
   storeName: "Home Vintage",
-  items: "Shoes"
+  items: ["Nascar Tees", "Hype-Beast", "90s Vintage"]
 },
 {
   id: 2,
   src: img2,
   alt: "Girl in red jacket standing in wheat field",
   storeName: "Platypus",
-  items: "Shoes"
+  items: ["Tees", "Bric-a-brac", "Womenswear"]
 },
 {
   id: 3,
   src: img3,
   alt: "Girl sitting on top of pool diving board with a fan of cash",
   storeName: "Rebel Sport",
-  items: "Shoes"
+  items: ["Shoes", "Jackets", "Menswear"]
 },
 {
   id: 4,
   src: img4,
   alt: "Girl posing in room with green jumper on",
   storeName: "Stirling",
-  items: "Shoes"
+  items: ["Nascar Tees", "Hype-Beast", "90s Vintage"]
 },
 {
   id: 5,
   src: img5,
   alt: "Guy in yellow top, pale blue jeans and nike shoes sitting on bed",
   storeName: "Vinties",
-  items: "Shoes"
+  items: ["Nascar Tees", "Hype-Beast", "90s Vintage"]
 },
 {
   id: 6,
   src: z,
   alt: "Girl in tracksuit wearing glasses sitting on ledge looking down at camera",
   storeName: "NZ Vintage",
-  items: "Shoes"
+  items: ["Shoes", "Jackets", "Menswear"]
 
 },
 {
@@ -76,70 +79,70 @@ const images = [{
   src: img7,
   alt: "Guy in blue, purple and orange jumper looking down at the ground",
   storeName: "The Portage Store",
-  items: "Shoes"
+  items: ["Tees", "Bric-a-brac", "Womenswear"]
 },
 {
   id: 8,
   src: img8,
   alt: "Guy looking down posing into camera",
   storeName:"The Amazing Store",
-  items: "Shoes"
+  items: ["Nascar Tees", "Hype-Beast", "90s Vintage"]
 },
 {
   id: 9,
   src: img9,
   alt: "Cute girl looking at camera in white singlet, blue jeans and black hangbag over shoulder",
   storeName: "Fashion Vintage",
-  items: "Shoes"
+  items: ["Tees", "Bric-a-brac", "Womenswear"]
 },
 {
   id: 10,
   src: img10,
   alt: "Guy in white denim jacket in front of parking sign with glasses on",
   storeName: "Running out of Ideas!",
-  items: "Shoes"
+  items: ["Shoes", "Jackets", "Menswear"]
 },
 {
   id: 11,
   src: b,
   alt: "Two girls posing in front of camera",
   storeName:"Pachichi",
-  items: "Shoes"
+  items: ["Nascar Tees", "Hype-Beast", "90s Vintage"]
 },
 {
   id: 12,
   src: c,
   alt: "Man crouching in front of upwards facing camera",
   storeName: "Boop scoop Vintage",
-  items: "Shoes"
+  items: ["Tees", "Bric-a-brac", "Womenswear"]
 },
 {
   id: 13,
   src: n,
   alt: "Lady in red dress and red scarf looking into camera",
   storeName: "xD Vinty Store",
-  items: "Shoes"
+  items: ["Shoes", "Jackets", "Menswear"]
 },
 {
   id: 14,
   src: v,
   alt: "Two girls posing like models",
   storeName: "Hello World!",
-  items: "Shoes"
+  items: ["Nascar Tees", "Hype-Beast", "90s Vintage"]
 },
 {
   id: 15,
   src: x,
   alt: "Girl looking into camera with orange fur coat over shoulder",
   storeName: "React Vintage",
-  items: "Tees"
+  items: ["Tees", "Bric-a-brac", "Womenswear"]
 },
 {
   id: 16,
   src: img6,
   alt: "Guy holding bucket hat looking into camera",
-  storeName: "The best store",
-  items: "Shoes"
+  storeName: "The Best Store",
+  items: ["Shoes", "Jackets", "Menswear"]
 }
 
 
@@ -149,30 +152,69 @@ const flip = (
   <div className='imageGrid'>
     {images.map((image =>
       <Flippy
-        style={{
-          display: 'flex',
-          justifyContent: 'center'
-        }}
+
         flipOnHover={false}
         flipOnClick={true}
         flipDirection="horizontal"
         >
-        <FrontSide>
+        <FrontSide
+          style={{
+            display: 'flex',
+            justifyContent: 'center'
+          }}>
           <img className='gridImages' key={image.id} alt={image.alt} src={image.src}></img>
         </FrontSide>
-        <BackSide>
+        <BackSide
+          style={{
+            display: 'flex',
+            justifyContent: 'center'
+          }}>
           <img className='backSideGridImage' alt={image.alt} src={image.src}></img>
-          <div className='imageBio'>
-            <div className="storeInfo">
-              <h3>{image.storeName}</h3>
-              <h4>{image.items}</h4>
+          <div className='cardBack'>
+            <div className="cardTop">
+              <h3 className="storeName">{image.storeName}</h3>
             </div>
+            <div className="cardBottom">
+                <div className="storeProducts">
+                  <span className="subHeader">Products</span>
+                    <p className="storeItems">{image.items[0]}</p>
+                    <p className="storeItems">{image.items[1]}</p>
+                    <p className="storeItems">{image.items[2]}</p>
+                </div>
+                <div className="storeSocials">
+                  <span className="subHeader">Visit</span>
+                  <div className="socialIcons">
+                    <a href='https://www.instagram.com'><img src={insta} alt="Instagram Icon"></img></a>
+                    <a href='https://www.facebook.com'><img src={facebook} alt="Facebook Icon"></img></a>
+                    <a href='https://wwww.google.com'><img src={globe} alt="Globe Icon"></img></a>
 
-            <div className='imageSocials'>
-              <a href={'https://www.google.com'}>Website</a>
-            </div>
+                  </div>
+                </div>
+              </div>
 
           </div>
+
+          {/* <ul className="socialsList">
+            <li className="website">Website</li>
+            <li className="insta">Insta</li>
+            <li className="fb">Facebook</li>
+          </ul> */}
+
+              {/* <div className="storeName">
+                {image.storeName}
+              </div> */}
+
+              {/* <div className="cardBottom">
+                <div className="storeProducts">
+
+                </div>
+                <div className="storeSocials">
+                  <a href={'https://www.google.com'}>Website</a>
+                </div>
+              </div>
+            </div>
+
+          </div> */}
         </BackSide>
         </Flippy>
     ))}

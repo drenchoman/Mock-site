@@ -13,6 +13,7 @@ const exploreStore = () => {
         <div className="mainContainer">
           <div className="mainDiv">
             <Sidebar />
+
             <div className="mainCta">
               <h2>Connecting you to the hottest vintage in NZ</h2>
               <button onClick={exploreStore}>Explore</button>
@@ -21,8 +22,8 @@ const exploreStore = () => {
               <img src= {tupac} alt="Girl posing with Tupac shirt"></img>
             </div>
             <SidebarRight />
-          </div>
 
+          </div>
 
 
 
