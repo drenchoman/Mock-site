@@ -11,8 +11,9 @@ const exploreStore = () => {
 
     return (
         <div className="mainContainer">
-          <div className="mainDiv">
-            <Sidebar />
+          <Sidebar />
+
+            <div className="mainDiv">
 
             <div className="mainCta">
               <h2>Connecting you to the hottest vintage in NZ</h2>
@@ -21,10 +22,10 @@ const exploreStore = () => {
             <div className="girlImg">
               <img src= {tupac} alt="Girl posing with Tupac shirt"></img>
             </div>
-            <SidebarRight />
+
 
           </div>
-
+  <SidebarRight />
 
 
         </div>

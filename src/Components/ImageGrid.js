@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import img1 from '../images/1.webp'
 import img2 from '../images/2.webp'
@@ -18,18 +18,11 @@ import x from '../images/x.webp'
 import z from '../images/z.webp'
 import insta from '../images/insta.svg'
 import facebook from '../images/facebook.svg'
+import arrow from '../images/flip.svg'
 import globe from '../images/globe.svg'
 
+
 function ImageGrid(props) {
-
-const [toggle, setToggle]= useState(false);
-
-
-const handleClickedCard = () => {
-  setToggle(!toggle)
-  console.log(toggle)
-
-}
 
 const images = [{
   id: 1,
@@ -160,14 +153,16 @@ const flip = (
         <FrontSide
           style={{
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
+
           }}>
           <img className='gridImages' key={image.id} alt={image.alt} src={image.src}></img>
+          <img className='flipIcon' src={arrow} alt="Flip Icon"></img>
         </FrontSide>
         <BackSide
           style={{
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
           }}>
           <img className='backSideGridImage' alt={image.alt} src={image.src}></img>
           <div className='cardBack'>
@@ -183,38 +178,15 @@ const flip = (
                 </div>
                 <div className="storeSocials">
                   <span className="subHeader">Visit</span>
-                  <div className="socialIcons">
                     <a href='https://www.instagram.com'><img src={insta} alt="Instagram Icon"></img></a>
                     <a href='https://www.facebook.com'><img src={facebook} alt="Facebook Icon"></img></a>
-                    <a href='https://wwww.google.com'><img src={globe} alt="Globe Icon"></img></a>
-
-                  </div>
+                    <a href='https://www.google.com'><img src={globe} alt="Globe Icon"></img></a>
                 </div>
               </div>
 
           </div>
 
-          {/* <ul className="socialsList">
-            <li className="website">Website</li>
-            <li className="insta">Insta</li>
-            <li className="fb">Facebook</li>
-          </ul> */}
 
-              {/* <div className="storeName">
-                {image.storeName}
-              </div> */}
-
-              {/* <div className="cardBottom">
-                <div className="storeProducts">
-
-                </div>
-                <div className="storeSocials">
-                  <a href={'https://www.google.com'}>Website</a>
-                </div>
-              </div>
-            </div>
-
-          </div> */}
         </BackSide>
         </Flippy>
     ))}
@@ -223,39 +195,11 @@ const flip = (
 
 )
 
-// const frontSide = (
-//   <div className='imageGrid'>
-//     {images.map((image =>
-//       <div className='imageContainer'>
-//         <img onClick={handleClickedCard} className='gridImages' key={image.id} alt={image.alt} src={image.src}></img>
-//       </div>
-//     ))}
-//   </div>
-//
-// )
-//
-// const backSide = (
-//   <div className='imageGrid'>
-//     {images.map((image =>
-//     <div className='imageContainer'>
-//       <img onClick={handleClickedCard} className='gridImages' key={image.id} alt={image.alt} src={image.src}></img>
-//         <h3>Hello World</h3>
-//     </div>))}
-//
-//   </div>
-//
-// )
 
 
     return (
       flip
-        // <div className="imageGrid">
-        //   {images.map((image =>
-        //   <div className="imageContainer">
-        //     <img className="gridImages" key={image.id} alt={image.alt} src={image.src}></img>
-        //   </div>
-        // ))}
-        // </div>
+
     )
 }
 

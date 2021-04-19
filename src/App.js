@@ -4,6 +4,7 @@ import Main from './Components/Main'
 import BottomNav from './Components/BottomNav'
 import Grid from './Components/Grid'
 
+
 import './App.css'
 
 function App() {

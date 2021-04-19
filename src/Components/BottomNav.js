@@ -1,11 +1,37 @@
 import React from 'react'
+import CopyRight from '../Components/CopyRight'
+import insta from '../images/insta.svg'
+import facebook from '../images/facebook.svg'
 
 function BottomNav() {
     return (
-        <div className="bottomNav">
-          <div className="bottomNavContent">
-            <span>Important content</span>
+        <div className="footer">
+          <div className="footerLeftContainer">
+            <div className="footerCTA">
+              <p><strong>Vintage Clothing.co.nz</strong> aims to connect you to local thrift & vintage stores within New Zealand.</p>
+              <p>These are often small, independent businesses who may find it difficult to reach an audience. </p>
+              <p>If you find this site valuable then please let us know, we love your feedback. </p>
+            </div>
+            <CopyRight />
           </div>
+          <div className="footerRightContainer">
+            <div className="siteLinks">
+              <h4 className="linksHeader aboutLink">About Us</h4>
+              <ul className="botNavLinks">
+                <li className="aboutNav">About</li>
+                <li className="blogNav">Blog</li>
+                <li className="contactNav">Contact</li>
+              </ul>
+            </div>
+            <div className="footerSocialLinks">
+              <h4 className="linksHeader">Our Socials</h4>
+              <div className="socialLinks">
+                <a href='https://www.instagram.com'><img src={insta} alt="Instagram Icon"></img></a>
+                <a href='https://www.facebook.com'><img src={facebook} alt="Facebook Icon"></img></a>
+              </div>
+            </div>
+          </div>
+
         </div>
     )
 }

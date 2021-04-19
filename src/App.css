@@ -23,10 +23,28 @@ html{
 
 }
 
+.navButton{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  display: none;
+}
+
 .navLogo {
   display: flex;
   position: absolute;
   left: 5%;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.navLogo1{
+  display: flex;
+  position: absolute;
+  left: 7%;
+  top: 55%;
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
 }
@@ -43,12 +61,27 @@ html{
   font-family: 'Nunito', sans-serif;
 }
 
+.aboutNav:hover, .blogNav:hover, .contactNav:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* .flipIcon:hover ~ .gridImages {
+  transform:scale(1.01);
+
+} */
+
+
+
+/* Main */
+
 .mainContainer {
   display: flex;
   width: 100%;
-  height: 100%;
-  flex-direction: column;
+  /* height: 100%; */
+  flex-direction: row;
   position: relative;
+  margin-bottom: 5%;
 
 
 }
@@ -63,6 +96,8 @@ html{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23ef2d9e' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23e359aa' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23dc80b6' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23daa2c3' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23dcc0d0' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23e3d9df' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
+  border-radius: 50px;
+
 
 
 
@@ -96,7 +131,7 @@ html{
 
 .mainCta > h2 {
   position: absolute;
-  width: 60%;
+  width: 70%;
   line-height: 1.3;
   letter-spacing: 2;
   left: 20%;
@@ -111,7 +146,7 @@ html{
   height: 10%;
   max-height: 100px;
   top: 75%;
-  left: 35%;
+  left: 40%;
   font-size: 2em;
   font-family: 'Nunito', sans-serif;
   color: white;
@@ -138,21 +173,107 @@ html{
   width: 10%;
   height: 100%;
   background-color: #fff;
+  /* background-color: blue; */
+
 }
 
-.bottomNav{
+.footer{
   display: flex;
   margin-top: 5%;
-  height: 20%;
+  height: 30vh;
   width: 100%;
   flex-direction: row;
-  background-color: blue;
+  background-color: pink;
+  position: relative;
 
 }
 
-.bottomNavContent{
+.footerLeftContainer{
   display: flex;
+  flex-direction: column;
   width: 100%;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+}
+
+.footerCTA{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: absolute;
+  font-size: 1.1em;
+  left: 11%;
+  top: 10%;
+}
+
+
+.copyRight{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+}
+
+.footerRightContainer{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+
+
+}
+
+
+.footerSocialLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  position: relative;
+  height: 50%;
+  bottom: 5%;
+}
+
+
+.linksHeader{
+  font-family: 'Nunito', sans-serif;
+  border-bottom: 1px solid white;
+  margin: 0;
+
+}
+.aboutLink{
+  position: relative;
+  top: 5%;
+}
+.siteLinks{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+
+
+}
+
+
+.socialLinks{
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.botNavLinks{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
 }
 
 /* grid */
@@ -196,13 +317,26 @@ html{
   gap: 20px;
 }
 .gridImages{
-  max-height: 100%;
+  max-height: 448px;
+  max-width: 300px;
   width: auto;
-  max-width: 100%;
+  display: block;
   height: auto;
   justify-self: center;
-  /* transform-style: preserve-3d;
-  transition: all .7s linear; */
+  /* transform-style: preserve-3d; */
+  /* transition: all linear .7s ; */
+}
+
+.gridImages:hover{
+  transform: scale(1.01);
+}
+
+.flipIcon{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:90%;
+  right: 18%;
 }
 
 .backSideGridImage{
@@ -257,12 +391,13 @@ html{
 
 .storeItems{
 font-size: 1.2em;
+font-weight: bold;
 padding: 2%;
 margin: 0;
 }
 
 a > img {
-  width: 30px;
+  width: 25px;
   max-width: 100%;
 }
 
@@ -272,16 +407,10 @@ a > img {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  justify-content: space-around;
   /* padding-left: 3%; */
 }
 
-.socialIcons{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-around;
-  padding-top: 1.5%
-}
 
 .storeProducts{
   display: flex;
@@ -330,4 +459,148 @@ a > img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.show-nav{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 72%;
+  top: 70%;
+  background-color: black;
+  color: #fff;
+  width: 15%;
+  padding: 1%
+}
+
+
+
+
+/* Media queries */
+
+@media screen and (max-width: 1366px){
+  .mainCta > h2{
+    font-size: 3.2em;
+    left: 23%;
+
+  }
+  .mainCta > button {
+    height: 8%;
+
+  }
+.navLogo1{
+  left:8%;
+  top:56%;
+}
+.imageGrid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 25vw)
+}
+.flipIcon{
+  right: 5%;
+  }
+  .storeName{
+    font-size: 2em;
+  }
+  .subHeader{
+    font-size: 1.2em;
+  }
+  .storeItems{
+    font-size: 1em;
+  }
+  a > img{
+    width: 20px;
+  }
+  .footerCTA{
+    font-size: 1em;
+    top: 0;
+  }
+  .footerCTA > p {
+    margin: 14px 0;
+  }
+
+}
+
+@media screen and (max-width: 575.98px){
+  .mainCta > h2{
+    font-size: 2em;
+    width: 100%;
+    left: 6%;
+
+  }
+  .navBox{
+    position: fixed;
+  }
+
+  .mainCta > button {
+    width: 50%;
+    height: 15%;
+    left: 25%;
+
+  }
+.navButton{
+  display: block;
+  position: absolute;
+  right: 15%;
+}
+.hide-nav{
+  display: none;
+}
+
+  .girlImg{
+    left: 20%;
+  }
+
+  .mainDiv{
+    flex-direction: column;
+    height: 80vh;
+  }
+  .mainContainer{
+    height: 80vh;
+  }
+  .sideBar{
+    height: 100vh;
+  }
+  .sideBarRight{
+    height: 100vh;
+  }
+  .navLogo1{
+    left: 10.5%;
+  }
+  .imageGrid{
+    /* grid-template-columns: repeat(16, 1fr) */
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: 1fr
+  }
+  .gridMain{
+    padding-bottom: 20%;
+  }
+  #explore{
+    font-size: 2em;
+  }
+  .flipIcon{
+    right: 7%;
+    }
+  .footer{
+      height: 70vh;
+      flex-direction: column;
+  }
+  .copyRight{
+      width: 100%;
+      top: 550px;
+      position: relative;
+      left: 0;
+
+
+  }
+  .footerLeftContainer{
+    flex-direction: row
+  }
+  .footerRightContainer{
+    flex-direction: column;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
 }
