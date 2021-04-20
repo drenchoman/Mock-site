@@ -1,5 +1,9 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import menu from '../images/menu.svg'
+import Directory from '../Components/Directory'
+import Blog from '../Components/Blog'
+
 
 function Navbar() {
   const [toggle, setToggle]=useState(false)
@@ -11,17 +15,32 @@ function Navbar() {
 
     return (
         <div className="navBox">
-          <span className="navLogo">Vintage Clothing</span>
-          <span className="navLogo1">.co.nz</span>
+          <span className="navLogo">
+            <Link style={{textDecoration: 'none'}} to="/">Vintage Clothing</Link>
+          </span>
+          <span className="navLogo1">
+            <Link style={{textDecoration: 'none'}} to="/">.co.nz</Link>
+          </span>
 <button className="navButton" onClick={changeToggle}><img src={menu} alt="Menu"></img></button>
 
-            <ul className={toggle ? "navLinks show-nav" : "navLinks hide-nav " }>
-              <li className="aboutNav">About</li>
-              <li className="blogNav">Blog</li>
-              <li className="contactNav">Contact</li>
-            </ul>
+
+
+
+  <ul className={toggle ? "navLinks show-nav" : "navLinks hide-nav " }>
+    <li className="aboutNav">
+      <Link style={{textDecoration: 'none'}} to="/About">About</Link>
+    </li>
+    <li className="blogNav"><Link style={{textDecoration: 'none'}} to="/Blog">Blog</Link>
+    </li>
+    <li className="contactNav">
+      <Link style={{textDecoration: 'none'}} to="/Directory">Directory</Link>
+    </li>
+  </ul>
+
+
 
         </div>
+
     )
 }
 

@@ -10,6 +10,7 @@ html{
 
 .app{
   height: 100vh;
+
 }
 
 .navBox {
@@ -61,9 +62,10 @@ html{
   font-family: 'Nunito', sans-serif;
 }
 
-.aboutNav:hover, .blogNav:hover, .contactNav:hover{
+.aboutNav:hover, .blogNav:hover, .directNav:hover{
   text-decoration: underline;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* .flipIcon:hover ~ .gridImages {
@@ -71,7 +73,101 @@ html{
 
 } */
 
+.directoryNav{
+  display: flex;
+  width: 80%;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  top: 10vh;
+  border-radius: 50px;
+  margin-bottom: 5%;
+  font-family: 'Nunito', sans-serif;
+  background: rgb(253,186,248);
 
+background: -webkit-linear-gradient(rgba(253,186,248,1) 0%, rgba(176,239,235,1) 50%, rgba(236,163,245,1) 100%);
+background: -o-linear-gradient(rgba(253,186,248,1) 0%, rgba(176,239,235,1) 50%, rgba(236,163,245,1) 100%);
+background: linear-gradient(rgba(253,186,248,1) 0%, rgba(176,239,235,1) 50%, rgba(236,163,245,1) 100%);
+
+
+
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endColorstr="#eca3f5",GradientType=1);
+
+}
+.navTitle{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  font-size: 2.5em;
+}
+
+.navTitle > h2 {
+  margin: 2% 0;
+}
+.navnav{
+  display: flex;
+}
+.directory{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  align-items: center;
+
+}
+
+.categoryMen{
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.menItems{
+  width: 40%;
+  min-height: 300px;
+  height: auto;
+  border: 5px solid #edffa9;
+  padding: 1% 0;
+  margin: 2% 0;
+  box-shadow: 1px 1px 5px black;
+  background-color: white;
+
+}
+.womenItems{
+  width: 40%;
+  min-height: 300px;
+  height: auto;
+  box-shadow: 1px 1px 5px black;
+  border: 10px solid #edffa9;
+  padding: 1% 0;
+  margin: 2% 0;
+  background-color: white;
+}
+
+.categoryWomen{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items:center;
+}
+
+.categoryHeader{
+  text-align: center;
+  font-size: 2em;
+  margin: 25px 0;
+
+  text-decoration: underline  black;
+}
+
+.categoryTitle{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1% 0;
+  text-decoration: underline #fdbaf8;
+}
 
 /* Main */
 
@@ -155,6 +251,11 @@ html{
   border-radius: 50px;
 }
 
+.mainCta > button:hover{
+  text-decoration: underline white;
+  cursor: pointer;
+}
+
 .sideBar {
   display: flex;
   flex-direction: column;
@@ -213,7 +314,7 @@ html{
   flex-direction: row;
   justify-content: center;
   position: absolute;
-  left: 50%;
+  left: 55%;
   bottom: 2%;
 }
 
@@ -306,6 +407,8 @@ html{
   z-index: 2;
   padding: 2.5% 0;
   }
+
+
 
 .imageGrid{
   display: grid;
@@ -603,4 +706,42 @@ a > img {
     top: 50%;
     width: 100%;
   }
+}
+
+
+.quickLinks{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: flex-start;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  height: 100%;
+
+}
+.quickLinks > h3 {
+  margin: 25px 0;
+  font-size: 2em;
+  text-decoration: underline white;
+}
+
+.menQuickLinks, .wQuickLinks{
+  display: flex;
+  flex-direction: column;
+}
+
+.quickLinkTitle{
+  text-decoration: underline white;
+}
+
+.qLinks{
+  cursor: pointer;
+
+}
+
+.qLinks:hover{
+  text-decoration: underline #edffa9;
+
 }

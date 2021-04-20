@@ -2,6 +2,7 @@ import React from 'react'
 import CopyRight from '../Components/CopyRight'
 import insta from '../images/insta.svg'
 import facebook from '../images/facebook.svg'
+import {Link} from 'react-router-dom'
 
 function BottomNav() {
     return (
@@ -18,9 +19,17 @@ function BottomNav() {
             <div className="siteLinks">
               <h4 className="linksHeader aboutLink">About Us</h4>
               <ul className="botNavLinks">
-                <li className="aboutNav">About</li>
-                <li className="blogNav">Blog</li>
-                <li className="contactNav">Contact</li>
+                <Link style={{textDecoration: 'none'}} to="/about">
+                  <li className="aboutNav">About</li>
+                </Link>
+                <Link style={{textDecoration: 'none'}} to="/blog">
+                  <li className="blogNav">Blog</li>
+                </Link>
+                <Link style={{textDecoration: 'none'}} to="/directory">
+                  <li className="directNav">Directory</li>
+                </Link>
+
+
               </ul>
             </div>
             <div className="footerSocialLinks">
