@@ -1,6 +1,4 @@
 import React from 'react'
-import Sidebar from '../Components/Sidebar'
-import SidebarRight from '../Components/SideBarRight'
 import tupac from '../images/tupacnobg.png'
 import scrollIntoView from 'scroll-into-view-if-needed'
 
@@ -8,16 +6,32 @@ function Main() {
 
 const scroll = () => {
   const node = document.querySelector("#explore")
-  scrollIntoView(node, {
-    scrollMode: 'if-needed',
-    block: 'start',
-    inline: 'end',
-    behavior: 'smooth',
-  })
+  const windowWidth = window.innerWidth
+  if (windowWidth < 570 ){
+    window.scrollTo({
+      top: 680,
+      behavior: 'smooth',
+      })
+
+
+    // scrollIntoView(node, {
+    //   scrollMode: 'if-needed',
+    //   block: 'start',
+    //   inline: 'center',
+    //   behavior: 'smooth',
+    // })
+  } else {
+    scrollIntoView(node, {
+      scrollMode: 'if-needed',
+      block: 'start',
+      inline: 'nearest',
+      behavior: 'smooth',
+    })
+  }
+
 }
     return (
         <div className="mainContainer">
-          <Sidebar />
 
             <div className="mainDiv">
 
@@ -31,7 +45,6 @@ const scroll = () => {
 
 
           </div>
-  <SidebarRight />
 
 
         </div>

@@ -149,11 +149,13 @@ const flip = (
         flipOnHover={false}
         flipOnClick={true}
         flipDirection="horizontal"
+
         >
         <FrontSide
           style={{
             display: 'flex',
             justifyContent: 'center',
+          
 
           }}>
           <img className='gridImages' key={image.id} alt={image.alt} src={image.src}></img>
@@ -163,6 +165,7 @@ const flip = (
           style={{
             display: 'flex',
             justifyContent: 'center',
+
           }}>
           <img className='backSideGridImage' alt={image.alt} src={image.src}></img>
           <div className='cardBack'>

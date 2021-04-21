@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 function DNav () {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
 
 const categoriesMen = [
   {
@@ -127,7 +131,9 @@ const scroll = (id) => {
             </div>
             <div className="navnav">
               <div className="quickLinks">
-                <h3>Quick Links</h3>
+                <div className="linkHeader">
+                  <h3>Quick Links</h3>
+                </div>
                 <div className="menQuickLinks">
                   <h3 className="quickLinkTitle">Mens</h3>
                   {categoriesMen.map((cat, i) =>

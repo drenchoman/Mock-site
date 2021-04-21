@@ -73,6 +73,69 @@ html{
 
 } */
 
+/* Aboutpage */
+.aboutPage{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.aboutContainer{
+  display: flex;
+  width: 80%;
+  background-color: teal;
+  height: 80vh;
+  flex-direction: column;
+  position: relative;
+  top: 10vh;
+  border-radius: 50px;
+  margin-bottom: 5%;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+}
+.aboutMain{
+  display: flex;
+
+}
+
+.aboutContent{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 100%;
+}
+
+.aboutTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.titleA{
+  font-size: 3em;
+}
+
+
+.aboutImage{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+
+}
+
+.aboutImage > img {
+  height: auto;
+  width: auto;
+  max-height: 500px
+}
+
+
+
 .directoryNav{
   display: flex;
   width: 80%;
@@ -129,11 +192,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
   width: 40%;
   min-height: 300px;
   height: auto;
-  border: 5px solid #edffa9;
+  border: 10px solid #edffa9;
   padding: 1% 0;
   margin: 2% 0;
   box-shadow: 1px 1px 5px black;
   background-color: white;
+
 
 }
 .womenItems{
@@ -166,14 +230,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
   text-align: center;
   font-size: 1.5em;
   margin: 1% 0;
-  text-decoration: underline #fdbaf8;
+  /* text-decoration: underline #fdbaf8; */
 }
 
 /* Main */
+.homeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .mainContainer {
   display: flex;
-  width: 100%;
+  width: 80%;
   /* height: 100%; */
   flex-direction: row;
   position: relative;
@@ -204,6 +273,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
   height: 100%;
   position: relative;
   left: 4%;
+
 
 }
 
@@ -256,27 +326,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
   cursor: pointer;
 }
 
-.sideBar {
-  display: flex;
-  flex-direction: column;
-  width: 10vw;
-  height: 100%;
-  background-color: #fff;
-  position: relative;
 
-
-}
-
-.sideBarRight{
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 10%;
-  height: 100%;
-  background-color: #fff;
-  /* background-color: blue; */
-
-}
 
 .footer{
   display: flex;
@@ -382,7 +432,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
 .exploreGrid{
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   /* height: 100%; */
   background-color: #fff;
   position: relative;
@@ -414,14 +464,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
   display: grid;
   position: relative;
   height: 100%;
+  width: 90%;
   /* background-color: pink; */
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 25vw);
   gap: 20px;
+
 }
 .gridImages{
-  max-height: 448px;
-  max-width: 300px;
+  max-height: 100%;
+  max-width: 100%;
   width: auto;
   display: block;
   height: auto;
@@ -570,10 +622,48 @@ a > img {
   position: relative;
   left: 72%;
   top: 70%;
-  background-color: black;
+  background-color: white;
+  border: 1px solid black;
   color: #fff;
-  width: 15%;
+  width: 18%;
   padding: 1%
+}
+
+.quickLinks{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: flex-start;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  height: 100%;
+
+}
+.quickLinks > h3 {
+  margin: 25px 0;
+  font-size: 2em;
+  text-decoration: underline white;
+}
+
+.menQuickLinks, .wQuickLinks{
+  display: flex;
+  flex-direction: column;
+}
+
+.quickLinkTitle{
+  text-decoration: underline white;
+}
+
+.qLinks{
+  cursor: pointer;
+
+}
+
+.qLinks:hover{
+  text-decoration: underline #edffa9;
+
 }
 
 
@@ -621,13 +711,30 @@ a > img {
   .footerCTA > p {
     margin: 14px 0;
   }
+  .aboutImage > img {
+    height: auto;
+    width: auto;
+    max-height: 325px
+  }
+.aboutImage{
+  width: 40%;
+}
+.aboutContent{
+  justify-content: flex-start;
+}
+.menItems, .womenItems{
+  width: 50%;
+}
+.navTitle > h2 {
+  font-size: 1.5em;
+}
 
 }
 
 @media screen and (max-width: 575.98px){
   .mainCta > h2{
     font-size: 2em;
-    width: 100%;
+    width: 90%;
     left: 6%;
 
   }
@@ -645,14 +752,12 @@ a > img {
   display: block;
   position: absolute;
   right: 15%;
+  top: 43%;
 }
 .hide-nav{
   display: none;
 }
 
-  .girlImg{
-    left: 20%;
-  }
 
   .mainDiv{
     flex-direction: column;
@@ -661,19 +766,23 @@ a > img {
   .mainContainer{
     height: 80vh;
   }
-  .sideBar{
-    height: 100vh;
-  }
-  .sideBarRight{
-    height: 100vh;
+
+  .navLogo{
+    left:10%;
   }
   .navLogo1{
-    left: 10.5%;
+    left: 20.5%;
   }
   .imageGrid{
     /* grid-template-columns: repeat(16, 1fr) */
     grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+
+    ;
+
+  }
+  .exploreGrid{
+    width: 90%;
   }
   .gridMain{
     padding-bottom: 20%;
@@ -690,7 +799,7 @@ a > img {
   }
   .copyRight{
       width: 100%;
-      top: 550px;
+      top: 545px;
       position: relative;
       left: 0;
 
@@ -706,42 +815,92 @@ a > img {
     top: 50%;
     width: 100%;
   }
-}
+  .navnav{
+    flex-direction: column;
+  }
+  .quickLinks{
+    flex-direction: row;
+    width: 100%;
+    border: none;
+  }
+  .linkHeader {
+    font-size: 1em;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    border: none;
+    text-transform: uppercase;
+  }
+  .menQuickLinks, .wQuickLinks{
+    height: 100%;
+    width: 100%;
 
+  }
+  .menQuickLinks{
+    padding-right: 2%;
+  }
+  .qLinks{
+    font-size: 1em;
+  }
+  .navTitle{
+    text-align: center;
+    padding: 5% 0;
+    border-bottom: 1px solid white;
+  }
+  .navTitle > h2 {
+    font-size: 0.9em;
+  }
+  .categoryMen, .categoryWomen{
+    width: 100%;
+  }
+  .directoryNav{
+    margin-bottom: 30%;
+    width: 90%;
+  }
+  .womenItems, .menItems {
+    width: 65%;
+  }
+  .aboutMain{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.quickLinks{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  align-items: center;
-  justify-content: flex-start;
-  border-right: 3px solid white;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-  height: 100%;
+  }
+  .aboutImage{
+    width: 100%;
+    justify-content: center;
+    padding-right: 0%;
+  }
+  .aboutContainer{
+    height: 100%;
+    width: 90%;
+    margin-bottom: 30%;
+  }
+  .aboutContent{
+    width: 75%;
+    align-items: center;
+  }
+  .titleA{
+    margin: 5% 0;
+  }
+  .show-nav{
+    top: 75%;
+    left: 70.5%;
+  }
+  .mainContainer{
+    height: 90vh;
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  .gridMain{
+    padding-top: 15%;
 
-}
-.quickLinks > h3 {
-  margin: 25px 0;
-  font-size: 2em;
-  text-decoration: underline white;
-}
-
-.menQuickLinks, .wQuickLinks{
-  display: flex;
-  flex-direction: column;
-}
-
-.quickLinkTitle{
-  text-decoration: underline white;
-}
-
-.qLinks{
-  cursor: pointer;
-
-}
-
-.qLinks:hover{
-  text-decoration: underline #edffa9;
+  }
+  .girlImg{
+    justify-content: center;
+    display: flex;
+  }
 
 }

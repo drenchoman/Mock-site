@@ -1,10 +1,15 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
+import React, {useEffect} from 'react'
+import BottomNav from '../Components/BottomNav'
+import AboutCont from '../Components/AboutCont'
 function About() {
-    return(
-        <div className="app">
-          <Navbar />
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
+    return(
+        <div className="aboutPage">
+        <AboutCont />
+        <BottomNav/>
         </div>
     )
 }

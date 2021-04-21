@@ -12,6 +12,11 @@ function Navbar() {
     setToggle(!toggle)
     console.log(toggle)
   }
+  const changeToggleIfOpen = () => {
+    if (toggle === true){
+      setToggle(!toggle)
+    } return
+  }
 
     return (
         <div className="navBox">
@@ -28,12 +33,13 @@ function Navbar() {
 
   <ul className={toggle ? "navLinks show-nav" : "navLinks hide-nav " }>
     <li className="aboutNav">
-      <Link style={{textDecoration: 'none'}} to="/About">About</Link>
+      <Link onClick={changeToggleIfOpen} style={{textDecoration: 'none'}} to="/About">About</Link>
     </li>
-    <li className="blogNav"><Link style={{textDecoration: 'none'}} to="/Blog">Blog</Link>
+    <li className="blogNav">
+      <Link onClick={changeToggleIfOpen} style={{textDecoration: 'none'}} to="/Blog">Blog</Link>
     </li>
     <li className="contactNav">
-      <Link style={{textDecoration: 'none'}} to="/Directory">Directory</Link>
+      <Link onClick={changeToggleIfOpen} style={{textDecoration: 'none'}} to="/Directory">Directory</Link>
     </li>
   </ul>
 
