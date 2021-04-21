@@ -822,6 +822,8 @@ a > img {
     flex-direction: row;
     width: 100%;
     border: none;
+    align-items: baseline;
+
   }
   .linkHeader {
     font-size: 1em;
@@ -829,13 +831,15 @@ a > img {
     text-orientation: upright;
     display: flex;
     flex-direction: column;
-    width: 77%;
+    width: 20%;
+    padding-top: 5.5%;
     border: none;
     text-transform: uppercase;
   }
   .menQuickLinks, .wQuickLinks{
     height: 100%;
     width: 100%;
+    align-items: flex-start
 
   }
   .menQuickLinks{
