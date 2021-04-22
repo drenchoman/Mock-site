@@ -9,12 +9,12 @@ function Home() {
   useEffect(()=> {
     window.scrollTo(0, 0);
     })
-    return (<div className="homeContainer">
+    return (<>
       <Main />
       <Grid />
       <BottomNav />
 
-    </div>
+    </>
     )
 }
 

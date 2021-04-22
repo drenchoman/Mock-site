@@ -12,14 +12,6 @@ const scroll = () => {
       top: 680,
       behavior: 'smooth',
       })
-
-
-    // scrollIntoView(node, {
-    //   scrollMode: 'if-needed',
-    //   block: 'start',
-    //   inline: 'center',
-    //   behavior: 'smooth',
-    // })
   } else {
     scrollIntoView(node, {
       scrollMode: 'if-needed',
@@ -31,23 +23,18 @@ const scroll = () => {
 
 }
     return (
-        <div className="mainContainer">
-
-            <div className="mainDiv">
-
-            <div className="mainCta">
-              <h2>Connecting you to the hottest vintage in NZ</h2>
-              <button onClick={scroll}>Explore</button>
-            </div>
-            <div className="girlImg">
-              <img src= {tupac} alt="Girl posing with Tupac shirt"></img>
-            </div>
-
-
-          </div>
-
-
-        </div>
+        <section className="mainContainer">
+            <div className="mainWrapper">
+              <div className="mainCta">
+                <h1>Connecting you to the hottest vintage in NZ</h1>
+                <h2>Over 50+ stores to explore </h2>
+                <button onClick={scroll}>Explore</button>
+              </div>
+              <div className="girlImg">
+                <img src= {tupac} alt="Girl posing with Tupac shirt"></img>
+                </div>
+                </div>
+        </section>
     )
 }
 
