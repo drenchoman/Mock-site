@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 function BottomNav() {
     return (
-        <div className="footer">
+        <section className="footer">
           <div className="footerLeftContainer">
             <div className="footerCTA">
               <p><strong>Vintage Clothing.co.nz</strong> aims to connect you to local thrift & vintage stores within New Zealand.</p>
@@ -15,6 +15,7 @@ function BottomNav() {
             </div>
             <CopyRight />
           </div>
+
           <div className="footerRightContainer">
             <div className="siteLinks">
               <h4 className="linksHeader aboutLink">About Us</h4>
@@ -26,22 +27,19 @@ function BottomNav() {
                   <li className="blogNav">Blog</li>
                 </Link>
                 <Link style={{textDecoration: 'none'}} to="/directory">
-                  <li className="directNav">Directory</li>
+                  <li className="directNavFooter">Directory</li>
                 </Link>
-
-
               </ul>
             </div>
+
             <div className="footerSocialLinks">
               <h4 className="linksHeader">Our Socials</h4>
-              <div className="socialLinks">
                 <a href='https://www.instagram.com'><img src={insta} alt="Instagram Icon"></img></a>
                 <a href='https://www.facebook.com'><img src={facebook} alt="Facebook Icon"></img></a>
-              </div>
             </div>
           </div>
 
-        </div>
+        </section>
     )
 }
 

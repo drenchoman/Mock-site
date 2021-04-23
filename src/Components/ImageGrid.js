@@ -155,8 +155,6 @@ const flip = (
           style={{
             display: 'flex',
             justifyContent: 'center',
-          
-
           }}>
           <img className='gridImages' key={image.id} alt={image.alt} src={image.src}></img>
           <img className='flipIcon' src={arrow} alt="Flip Icon"></img>

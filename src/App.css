@@ -9,19 +9,22 @@ html{
 }
 
 .app{
-  height: 100vh;
+  height: 100%;
 
 }
+
+/********** NAVIGATION  *********/
 
 .navBox {
   width: 100%;
   height: 10vh;
+  top: 0;
   position: fixed;
   z-index: 2;
   background-color: #fff;
   display: flex;
   align-items: center;
-
+  justify-content: space-between
 }
 
 .navButton{
@@ -32,48 +35,387 @@ html{
   color: white;
   display: none;
 }
-
-.navLogo {
+.logoContainer{
   display: flex;
-  position: absolute;
-  left: 5%;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
 }
-
-.navLogo1{
-  display: flex;
-  position: absolute;
-  left: 7%;
-  top: 55%;
+.logoContainer > span {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
+  color: black;
 }
 
 .navLinks {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-content: center;
-  width: 35vw;
-  left: 60%;
-  position: absolute;
+  width: 25vw;
+  margin-right: 10%;
   font-family: 'Nunito', sans-serif;
 }
 
-.aboutNav:hover, .blogNav:hover, .directNav:hover{
+.aboutNav:hover, .blogNav:hover, .directNav:hover, .directNavFooter:hover{
   text-decoration: underline;
   cursor: pointer;
-  font-weight: bold;
+
 }
 
-/* .flipIcon:hover ~ .gridImages {
-  transform:scale(1.01);
 
-} */
+.directNav{
+  background-color: rgb(253,186,248);
+  padding: 0 2%;
 
-/* Aboutpage */
+}
+.directNav > a {
+  color: #000;
+
+}
+
+.show-nav{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* left: 72%;
+  top: 70%; */
+  background-color: white;
+  border: 1px solid black;
+  color: #fff;
+  width: 18%;
+  padding: 1%
+}
+
+/***************** Main Section *****************/
+.homeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContainer {
+  display: flex;
+  width: 80%;
+  height: 80vh;
+  flex-direction: row;
+  margin: 10vh auto 5%;
+}
+
+.mainWrapper {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23ef2d9e' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23e359aa' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23dc80b6' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23daa2c3' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23dcc0d0' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23e3d9df' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainImg > img{
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+.mainCta{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-left: 5%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mainCta > h1 {
+  width: 80%;
+  line-height: 1.3;
+  letter-spacing: 2;
+  font-size: 4em;
+  font-family: 'Nunito', sans-serif;
+}
+
+.mainCta > h2 {
+  font-size: 2.5em;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.3;
+  letter-spacing: 2;
+}
+
+.mainCta > button {
+  width: 25%;
+  height: 10%;
+  max-height: 100px;
+  font-size: 2em;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  border: none;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.mainCta > button:hover{
+  text-decoration: underline white;
+  cursor: pointer;
+}
+
+
+/************ Grid ************/
+
+.exploreGrid{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto 5%;
+  background-color: #fff;
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5%;
+  border-radius: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(199,180,255);
+  background: linear-gradient(180deg, rgba(199,180,255,1) 0%, rgba(152,221,202,1) 95%, rgba(152,221,202,1) 100%);
+}
+
+.exploreTitle {
+  font-size: 3em;
+  font-family: 'Nunito', sans-serif;
+  z-index: 2;
+  padding: 1% 0;
+  margin-bottom: 0;
+}
+
+.exploreSubTitle{
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  padding: 1% 0;
+}
+
+/*********** ImageGrid  *****************/
+
+.imageGrid {
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 25vw);
+  gap: 20px;
+}
+
+.gridImages{
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  height: auto;
+  justify-self: center;
+}
+
+.gridImages:hover{
+  transform: scale(1.01);
+}
+
+.flipIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:90%;
+  right: 18%;
+}
+
+.backSideGridImage{
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  justify-self: center;
+  opacity: 0.2;
+  position: relative;
+  display: flex;
+}
+
+.cardBack{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  max-width: 80%;
+  height: 92%;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.cardTop{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardBottom{
+  display: flex;
+  flex-direction: row;
+  height: 60%;
+  width: 100%;
+
+}
+
+.storeName{
+  font-size: 2.5em;
+  margin: 0;
+  /* padding-left: 1%; */
+}
+
+.storeItems{
+font-size: 1.2em;
+font-weight: bold;
+padding: 2%;
+margin: 0;
+}
+
+a > img {
+  width: 25px;
+  max-width: 100%;
+}
+
+
+.storeSocials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  /* padding-left: 3%; */
+}
+
+.storeProducts{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* padding-left: 3%; */
+
+}
+.subHeader {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+/************ Footer *************/
+
+.footer{
+  display: flex;
+  height: 30vh;
+  width: 100%;
+  flex-direction: row;
+  background-color: pink;
+}
+
+.footerLeftContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  justify-content: center;
+}
+
+.footerRightContainer{
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  right: 6%;
+}
+
+
+.footerCTA{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 13%;
+  font-size: 1.1em;
+
+}
+
+.footerSocialLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  margin-bottom: 10%;
+
+}
+.footerSocialLinks > .linksHeader{
+  margin-bottom: 20%;
+}
+
+.linksHeader{
+  font-family: 'Nunito', sans-serif;
+  border-bottom: 1px solid white;
+  margin: 0;
+}
+
+
+.siteLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  margin-bottom: 10%;
+
+
+}
+
+.botNavLinks{
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: baseline;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.copyRight{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  left: 55%;
+  top: 5%;
+  width: 20%;
+}
+
+/*************************** Aboutpage ********************/
 .aboutPage{
   justify-content: center;
   display: flex;
@@ -233,400 +575,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbaf8",endCo
   /* text-decoration: underline #fdbaf8; */
 }
 
-/* Main */
-.homeContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.mainContainer {
-  display: flex;
-  width: 80%;
-  height: 80vh;
-  flex-direction: row;
-  position: relative;
-  top: 10vh;
-  margin: auto;
-
-
-
-}
-
-.mainWrapper {
-  width: 100%;
-  height: 90vh;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  /* background-color: #fc0093; */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23ef2d9e' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23e359aa' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23dc80b6' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23daa2c3' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23dcc0d0' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23e3d9df' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
-  border-radius: 50px;
-
-
-
-
-}
-
-.girlImg {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  left: 4%;
-
-
-}
-
-.girlImg > img{
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  width: auto;
-  position: absolute;
-
-}
-
-.mainCta{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.mainCta > h1 {
-  width: 90%;
-  line-height: 1.3;
-  letter-spacing: 2;
-
-  font-size: 4.5em;
-  font-family: 'Nunito', sans-serif;
-}
-
-.mainCta > button {
-  width: 25%;
-  height: 10%;
-  max-height: 100px;
-  font-size: 2em;
-  font-family: 'Nunito', sans-serif;
-  color: white;
-  border: none;
-  background-color: black;
-  border-radius: 50px;
-}
-
-.mainCta > button:hover{
-  text-decoration: underline white;
-  cursor: pointer;
-}
-
-
-
-.footer{
-  display: flex;
-  margin-top: 5%;
-  height: 30vh;
-  width: 100%;
-  flex-direction: row;
-  background-color: pink;
-  position: relative;
-
-}
-
-.footerLeftContainer{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
-  font-family: 'Nunito', sans-serif;
-  position: relative;
-}
-
-.footerCTA{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  position: absolute;
-  font-size: 1.1em;
-  left: 11%;
-  top: 10%;
-}
-
-
-.copyRight{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: absolute;
-  left: 55%;
-  bottom: 2%;
-}
-
-.footerRightContainer{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  height: 100%;
-  align-items: center;
-
-
-}
-
-
-.footerSocialLinks{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  position: relative;
-  height: 50%;
-  bottom: 5%;
-}
-
-
-.linksHeader{
-  font-family: 'Nunito', sans-serif;
-  border-bottom: 1px solid white;
-  margin: 0;
-
-}
-.aboutLink{
-  position: relative;
-  top: 5%;
-}
-.siteLinks{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
-
-
-}
-
-
-.socialLinks{
-  display: flex;
-  align-content: space-between;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.botNavLinks{
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 100%;
-  font-family: 'Nunito', sans-serif;
-}
-
-/* grid */
-
-.exploreGrid{
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  /* height: 100%; */
-  background-color: #fff;
-
-}
-
-.gridMain{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5%;
-  border-radius: 50px;
-  justify-content: flex-start;
-  align-items: center;
-
-  background: rgb(199,180,255);
-  background: linear-gradient(180deg, rgba(199,180,255,1) 0%, rgba(152,221,202,1) 95%, rgba(152,221,202,1) 100%);}
-
-#explore {
-  font-size: 3em;
-  font-family: 'Nunito', sans-serif;
-  z-index: 2;
-  padding: 2.5% 0;
-  }
-
-
-
-.imageGrid{
-  display: grid;
-  position: relative;
-  height: 100%;
-  width: 90%;
-  /* background-color: pink; */
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 25vw);
-  gap: 20px;
-
-}
-.gridImages{
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  display: block;
-  height: auto;
-  justify-self: center;
-  /* transform-style: preserve-3d; */
-  /* transition: all linear .7s ; */
-}
-
-.gridImages:hover{
-  transform: scale(1.01);
-}
-
-.flipIcon{
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top:90%;
-  right: 18%;
-}
-
-.backSideGridImage{
-  max-height: 100%;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  align-items: center;
-  justify-self: center;
-  opacity: 0.2;
-  position: relative;
-  display: flex;
-}
-
-.cardBack{
-  display: flex;
-  position: absolute;
-  /* justify-content: center;
-  align-items: center; */
-  flex-direction: column;
-  width: 100%;
-  max-width: 80%;
-  height: 92%;
-  font-family: 'Nunito', sans-serif;
-  /* background-color: blue; */
-}
-
-.cardTop{
-  display: flex;
-  /* background-color: green; */
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.cardBottom{
-  display: flex;
-  flex-direction: row;
-  height: 60%;
-  width: 100%;
-}
-
-.storeName{
-  font-size: 2.5em;
-  margin: 0;
-  /* padding-left: 1%; */
-}
-
-
-
-.storeItems{
-font-size: 1.2em;
-font-weight: bold;
-padding: 2%;
-margin: 0;
-}
-
-a > img {
-  width: 25px;
-  max-width: 100%;
-}
-
-
-.storeSocials{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-  /* padding-left: 3%; */
-}
-
-
-.storeProducts{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  /* padding-left: 3%; */
-
-}
-.subHeader {
-  font-size: 1.5em;
-  font-weight: bold;
-
-}
-
-.imageContainer{
-  position: relative;
-  z-index: 1;
-  perspective: 1000px;
-}
-
-/* .imageContainer:hover .gridImages  {
-  transform: rotateY(180deg);
-} */
-
-
-.imageContainer > h3 {
-  position: absolute;
-  top: 10%;
-  z-index: 2;
-}
-
-.cardSide {
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-
-.card{
-  width: 100px;
-  height: 200px;
-  border: solid 1px black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.show-nav{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 72%;
-  top: 70%;
-  background-color: white;
-  border: 1px solid black;
-  color: #fff;
-  width: 18%;
-  padding: 1%
-}
 
 .quickLinks{
   display: flex;
@@ -671,19 +620,19 @@ a > img {
 /* Media queries */
 
 @media screen and (max-width: 1366px){
-  .mainCta > h2{
-    font-size: 3.2em;
-    left: 23%;
 
+  .mainCta > h1{
+    font-size: 3em;
+    width: 100%;
+  }
+  .mainCta > h2 {
+    font-size: 1.5em;
   }
   .mainCta > button {
-    height: 8%;
-
+    height: 10%;
+    width: 30%;
   }
-.navLogo1{
-  left:8%;
-  top:56%;
-}
+
 .imageGrid{
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 25vw)
@@ -703,12 +652,20 @@ a > img {
   a > img{
     width: 20px;
   }
+  .footer{
+    height: 40vh;
+  }
   .footerCTA{
     font-size: 1em;
-    top: 0;
+
   }
   .footerCTA > p {
     margin: 14px 0;
+  }
+  .copyRight{
+    width: 50%;
+    justify-content: center;
+    left: 40%;
   }
   .aboutImage > img {
     height: auto;
@@ -730,90 +687,176 @@ a > img {
 
 }
 
-@media screen and (max-width: 575.98px){
-  .mainCta > h2{
-    font-size: 2em;
-    width: 90%;
-    left: 6%;
-
+@media only screen and (max-width: 320px) {
+  .logoContainer{
+    font-size: 0.9em;
   }
-  .navBox{
-    position: fixed;
+  .navLinks{
+    font-size: 0.9em;
+  }
+  .mainCta > h1 {
+    font-size: 1.4em;
+    width: 85%;
+  }
+  .mainCta > h2 {
+    font-size: 1.1em;
+  }
+  .mainCta > button {
+    width: 25%;
+    height: 10%;
+    font-size: 1.5em;
+  }
+  /* EXPLORE GRID */
+  .imageGrid{
+    padding-bottom: 10%;
+  }
+  .storeName{
+    font-size: 1.8em;
+  }
+  .subHeader{
+    font-size: 1.3em;
+  }
+  .storeItems{
+    font-size: 1.1em;
+  }
+  .flipIcon{
+    right: 10%;
+  }
+  /* FOOOTER */
+  .footer {
+    height: 100vh;
+  }
+  .copyRight{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 575.98px){
+  /* NAV */
+  .navLinks{
+    width: 50vw;
+    margin-right: 10%;
+    padding: 0;
+  }
+  .logoContainer{
+    margin-left: 5%;
+  }
+
+  .navButton{
+    display: block;
+    position: absolute;
+    right: 15%;
+    top: 43%;
+  }
+  /* MAIN */
+
+ .mainWrapper {
+  flex-direction: column;
+  height: 100%;
+ }
+.mainContainer {
+    height: 85vh;
+    margin-bottom: 15%;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .mainCta {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+  }
+
+  .mainCta > h1 {
+    font-size: 2em;
+    width: 100%;
   }
 
   .mainCta > button {
     width: 50%;
-    height: 15%;
-    left: 25%;
-
-  }
-.navButton{
-  display: block;
-  position: absolute;
-  right: 15%;
-  top: 43%;
-}
-.hide-nav{
-  display: none;
-}
-
-
-  .mainDiv{
-    flex-direction: column;
-    height: 80vh;
-  }
-  .mainContainer{
-    height: 80vh;
+    height: 20%;
+    z-index: 3;
+    /* margin-bottom: 5%; */
   }
 
-  .navLogo{
-    left:10%;
+ .mainImg{
+    /* overflow: hidden; */
+    height: 100%;
+    /* background-color: green; */
+
   }
-  .navLogo1{
-    left: 20.5%;
+
+ .mainImg > img {
+    position: relative;
+    left: 7%;
+    bottom: 10%;
+    /* object-fit: cover; */
   }
+
+/* EXPLORE GRID */
   .imageGrid{
     /* grid-template-columns: repeat(16, 1fr) */
     grid-template-rows: repeat(16, 1fr);
     grid-template-columns: 1fr;
 
-    ;
-
   }
+
   .exploreGrid{
     width: 90%;
+    margin-bottom: 15%;
   }
+
   .gridMain{
     padding-bottom: 20%;
   }
-  #explore{
+
+  .exploreTitle{
     font-size: 2em;
   }
+
+  .subHeader{
+    font-size: 1.5em;
+  }
+  .storeItems{
+    font-size: 1.2em;
+  }
+  a > img {
+    width: 28px;
+  }
+
   .flipIcon{
     right: 7%;
     }
+
+  .footerCTA{
+    width: 80%;
+    margin: auto;
+    }
+
   .footer{
-      height: 70vh;
+      height: 65vh;
+      width: 100%;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
   .copyRight{
-      width: 100%;
-      top: 545px;
-      position: relative;
-      left: 0;
-
-
-  }
-  .footerLeftContainer{
-    flex-direction: row
+    position: relative;
+    margin: auto;
+    width: 80%;
+    left: 0;
+    top: 60%;
   }
   .footerRightContainer{
-    flex-direction: column;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 80%;
+    height: 30%;
+    font-size: 1em;
+
   }
+
+
   .navnav{
     flex-direction: column;
   }
@@ -889,21 +932,61 @@ a > img {
     margin: 5% 0;
   }
   .show-nav{
-    top: 75%;
-    left: 70.5%;
+    top: 80%;
   }
-  .mainContainer{
-    height: 90vh;
-    width: 90%;
-    margin-bottom: 5%;
-  }
+
   .gridMain{
     padding-top: 15%;
 
   }
-  .girlImg{
-    justify-content: center;
-    display: flex;
-  }
 
+}
+
+@media screen and (max-width: 768px){
+  .mainContainer{
+    width: 90%;
+    height: 100%;
+  }
+  .mainWrapper{
+  height: 50vh;
+  }
+  .mainCta > button {
+    display: none;
+  }
+  .exploreGrid {
+    width: 90%;
+  }
+  .flipIcon{
+    right: 8%;
+  }
+  .storeName{
+    font-size: 2em;
+  }
+  .subHeader{
+    font-size: 1.5em;
+  }
+  .storeItems{
+    font-size: 1.2em;
+  }
+  a > img {
+    width: 25px;
+  }
+  .imageGrid{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer{
+    height: 32vh;
+  }
+  .footerLeftContainer{
+    width: 80%;
+  }
+  .copyRight{
+    width: 100%;
+    left: 20%;
+  }
+  .footerRightContainer{
+    position: relative;
+    right: 10%;
+  }
 }
